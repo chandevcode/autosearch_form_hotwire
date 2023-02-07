@@ -1,0 +1,11 @@
+<%= form_with(url: motors_path, method: :get, data: {controller: "search-form", turbo_frame: "motors", turbo_action: "advance"}) do |form| %>
+
+  <%= form.label :query, "Search ... ", class: "block mb-2" %>
+  <div class="flex space-x-3">
+    <%= form.text_field :query, class: "input input-bordered w-full max-w-xs" %> 
+
+    <%= form.submit 'Search', class: "btn btn-warning" %>
+  </div>
+
+
+<% end %>
