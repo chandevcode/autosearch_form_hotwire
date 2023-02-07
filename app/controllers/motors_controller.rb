@@ -8,8 +8,14 @@ class MotorsController < ApplicationController
               else
                 Motor.all
               end
+
+    if turbo_frame_request?
+      render partial: 'motors', locals: { motors: @motors }
+    else
+      render :index
+    end
   end
-  e
+
   # GET /motors/1 or /motors/1.json
   def show; end
 

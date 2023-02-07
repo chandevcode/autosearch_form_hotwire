@@ -1,7 +1,7 @@
+
 <div id="<%= dom_id motor %>">
-  <p>
-    <strong>Name:</strong>
-    <%= motor.name %>
+  <p class='text-lg leading-loose'>
+  <%= link_to motor.name, motor_path(motor), class: "text-orange-600 underline hover:text-orange-700" %>
   </p>
 
 </div>
